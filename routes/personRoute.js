@@ -6,7 +6,8 @@ import {
   handleDeletePerson,
   handleEditPerson,
 } from "../controllers/personControllers.js";
-import authRequest from "../middleware/AuthRequest.js";
+import authRequest from "../middleware/authRequest.js";
+
 const route = Router();
 route.use(authRequest);
 route.get("/", handleGetAllPeople);
